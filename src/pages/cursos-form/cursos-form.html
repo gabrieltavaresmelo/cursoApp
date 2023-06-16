@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Curso Form</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Professor</ion-label>
+      <ion-input type="text" [(ngModel)]="professor"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Carga Horária</ion-label>
+      <ion-input type="text" [(ngModel)]="cargaHoraria"></ion-input>
+    </ion-item>
+
+    <button ion-button block (click)="salvar()">Salvar</button>
+    <button *ngIf="key !== undefined" ion-button block (click)="removerConfirm()">Remover</button>
+  
+  </ion-list>
+
+</ion-content>
